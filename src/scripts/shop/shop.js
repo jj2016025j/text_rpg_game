@@ -3,10 +3,15 @@ import { Inventory } from "../Inventory/Inventory.js";
 
 export class Shop {
     constructor(gameSystem, { id, name, itemsForSale = [] }) {
-        this.gameSystem = gameSystem; 
+        this.gameSystem = gameSystem;
         this.id = id;
         this.name = name;
-        this.inventory = new Inventory(gameSystem, { items: itemsForSale, gold: 0 }); // 使用 InventoryManager 管理商品
+        console.log(itemsForSale)
+
+        // 🔹 將字串 ID 轉換為完整的物品物件
+        const fullItems = itemsForSale.map(itemId => gameSystem.itemManager.getItemById(itemId)).filter(item => item !== null);
+
+        this.inventory = new Inventory(gameSystem, { items: fullItems, gold: 0 });
     }
 
     // ✅ 列出商店內所有商品

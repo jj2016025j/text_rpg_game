@@ -21,7 +21,7 @@ export class NPCUI {
   }
 
   static render() {
-    const npcList = document.querySelector("#npcList");
+    const npcList = document.querySelector("#npc-list");
     if (!npcList) {
       console.error("❌ 無法找到 #npcList，請確認 HTML 結構");
       return;
@@ -30,23 +30,53 @@ export class NPCUI {
     npcList.innerHTML = ""; // 清空列表
 
     if (!this.npcs || this.npcs.length === 0) {
-      npcList.innerHTML = "<li>📜 這個地點沒有 NPC</li>";
+      npcList.innerHTML = "<div class='no-npc'>📜 這個地點沒有 NPC</div>";
       return;
     }
 
     this.npcs.forEach(npc => {
-      const li = document.createElement("li");
-      li.textContent = npc.name;
-      li.dataset.npcId = npc.id; // 綁定 NPC ID
-
-      const greetButton = document.createElement("button");
-      greetButton.textContent = "打招呼";
-      greetButton.classList.add("greet-button"); // ✅ 添加 class 方便事件委派
-      greetButton.dataset.npcId = npc.id; // 綁定 NPC ID
-
-      li.appendChild(greetButton);
-      npcList.appendChild(li);
+      const npcElement = NPCUI.createNPCElement(npc);
+      npcList.appendChild(npcElement);
     });
+    // this.npcs.forEach(npc => {
+    //   const li = document.createElement("li");
+    //   li.textContent = npc.name;
+    //   li.dataset.npcId = npc.id; // 綁定 NPC ID
+
+    //   const greetButton = document.createElement("button");
+    //   greetButton.textContent = "打招呼";
+    //   greetButton.classList.add("greet-button"); // ✅ 添加 class 方便事件委派
+    //   greetButton.dataset.npcId = npc.id; // 綁定 NPC ID
+
+    //   li.appendChild(greetButton);
+    //   npcList.appendChild(li);
+    // });
+  }
+
+  // ✅ 創建 NPC UI 元素
+  static createNPCElement(npc) {
+    const npcDiv = document.createElement("div");
+    npcDiv.className = "npc";
+    npcDiv.dataset.npcId = npc.id; // 綁定 NPC ID
+
+    // NPC 名稱
+    const npcName = document.createElement("h3");
+    npcName.textContent = npc.name;
+
+    // NPC 按鈕
+    const greetButton = document.createElement("div");
+    greetButton.className = "npc-button";
+    greetButton.textContent = "對話";
+    greetButton.dataset.npcId = npc.id;
+
+    // 點擊對話
+    greetButton.addEventListener("click", () => NPCUI.handleGreet(npc.id));
+
+    // 組合
+    npcDiv.appendChild(npcName);
+    npcDiv.appendChild(greetButton);
+
+    return npcDiv;
   }
 
   static handleGreet(npcId) {

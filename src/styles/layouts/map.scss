@@ -21,6 +21,7 @@
     align-items: center;
     gap: 24px;
 }
+
 #map-area {
     display: flex;
     flex-direction: column;
@@ -69,6 +70,13 @@
     border-radius: 8px;
     color: #000;
     background-color: #E5E5E5;
+    min-width: 120px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .monster-name-level {
@@ -104,6 +112,7 @@
     align-items: flex-start;
     gap: 2px;
     align-self: stretch;
+    width: 100%;
 }
 
 .monster-bar {
@@ -121,14 +130,12 @@
 .monster-hp {
     background-color: #EA1313;
     height: 100%;
-    width: 50%;
     border-radius: 5px;
 }
 
 .monster-mp {
     background-color: #3B97F3;
     height: 100%;
-    width: 50%;
     border-radius: 5px;
 }
 
@@ -143,7 +150,7 @@
     background-color: #FFF;
 }
 
-.npc-list {
+#npc-list {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -160,6 +167,13 @@
     border-radius: 8px;
     background-color: #E5E5E5;
     color: #000;
+    min-width: 120px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .npc-button {
@@ -170,6 +184,17 @@
     border-radius: 4px;
     background-color: #3E3F40;
     color: #FFF;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+.no-npc {
+    color: #888;
+    font-style: italic;
 }
 
 #object-area {
@@ -200,6 +225,13 @@
     border-radius: 8px;
     color: #000;
     background-color: #E5E5E5;
+    min-width: 120px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .object-button {
@@ -210,4 +242,15 @@
     border-radius: 4px;
     color: #FFF;
     background-color: #3E3F40;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+.no-object {
+    color: #888;
+    font-style: italic;
 }

@@ -138,7 +138,7 @@ export const itemsData = [
       name: "鋼劍",
       value: 150,
       description: "鋒利的鋼劍，適合近戰。",
-      quantity: 2,
+      quantity: 1,
       attributes: {
         effects: {
           damage: 15

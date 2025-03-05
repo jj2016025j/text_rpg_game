@@ -19,6 +19,7 @@
     height: 100px;
     gap: 24px;
     background-color: #CBCCCC;
+    color: #000;
 }
 
 .skill-button {
@@ -32,6 +33,17 @@
     gap: 8px;
     border-radius: 8px;
     background-color: #CBCCCC;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.skill-button:hover {
+    background-color: #555;
+}
+
+.skill-button.cooldown {
+    background-color: #aaa;
+    cursor: not-allowed;
 }
 
 .shop-button {
@@ -42,4 +54,17 @@
     border-radius: 4px;
     background-color: #3E3F40;
     color: #fff;
+}
+
+.backpack-button {
+    padding: 6px 12px;
+    background-color: #3E3F40;
+    color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #555;
+    }
 }

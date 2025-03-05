@@ -154,13 +154,13 @@ export class PlayerUI {
       },
     ];
 
-    buttonConfigs.forEach(({ id, handler }) => {
-      const button = document.getElementById(id);
-      if (button) {
-        button.addEventListener("click", handler);
-      } else {
-        console.warn(`⚠️ 按鈕 ${id} 未找到`);
-      }
-    });
+    // buttonConfigs.forEach(({ id, handler }) => {
+    //   const button = document.getElementById(id);
+    //   if (button) {
+    //     button.addEventListener("click", handler);
+    //   } else {
+    //     console.warn(`⚠️ 按鈕 ${id} 未找到`);
+    //   }
+    // });
   }
 }

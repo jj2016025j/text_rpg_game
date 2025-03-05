@@ -5,10 +5,12 @@ export class Inventory {
         this.gameManager = gameManager;
         this.gold = typeof gold === "number" ? gold : 0;
         this.items = new Map();
+        console.log(items)
 
         items.forEach(({ id, quantity }) => {
+            const item = this.gameManager.itemManager.getItemById(id)
             if (this.gameManager.itemManager.getItemById(id)) {
-                this.items.set(id, { id, quantity }); // ✅ 只存 ID 和數量
+                this.items.set(id, { ...item, quantity }); // ✅ 只存 ID 和數量
             } else {
                 SystemLog.addMessage(`⚠️ 找不到物品 ID: ${id}`);
             }

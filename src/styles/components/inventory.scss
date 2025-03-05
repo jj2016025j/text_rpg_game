@@ -31,6 +31,16 @@
     color: $color-black;
 }
 
+// 選取物品的樣式
+.item.selected {
+    background-color: rgba(62, 63, 64, 0.8); // 深色背景
+    border: 2px solid #FFD700; // 金色邊框
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8); // 金色發光效果
+    color: #FFFFFF; // 文字變白
+    transform: scale(1.01); // 稍微放大
+    transition: all 0.2s ease-in-out;
+}
+
 .backpack-title {
     display: flex;
     justify-content: space-between;

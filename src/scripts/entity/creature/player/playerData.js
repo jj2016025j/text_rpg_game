@@ -29,8 +29,8 @@ function getDefaultPlayerState() {
 function getDefaultPlayerInventory() {
   return {
     items: [
-      { id: "Sword", quantity: 2 },
-      { id: "ElvenBow", quantity: 1 },
+      { id: "sword", quantity: 2 },
+      { id: "elvenBow", quantity: 1 },
     ],
     gold: 100,
   };
@@ -38,5 +38,5 @@ function getDefaultPlayerInventory() {
 
 // ✅ 初始化玩家技能
 function getDefaultPlayerSkills() {
-  return ["Fireball", "Heal"];
+  return ["fireball", "heal"];
 }

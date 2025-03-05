@@ -6,17 +6,17 @@ export class MapUI {
     this.mapManager = gameSystem.mapManager; // ✅ 儲存 gameSystem 以便 switchMap
     this.mapData = this.mapManager.listAllRegions(); // ✅ 儲存 gameSystem 以便 switchMap
     this.currentLocation = gameSystem.currentLocation; // ✅ 儲存 gameSystem 以便 switchMap
-    this.renderMapUI();
+    this.update();
     SystemLog.addMessage("[地圖UI] 已初始化 🗺️");
   }
 
-  static renderMapUI() {
+  static update() {
     if (!Array.isArray(this.mapData)) {
         console.error("❌ `mapData` 不是有效的陣列:", this.mapData);
         return;
     }
 
-    const mapListContainer = document.querySelector("#maps .list");
+    const mapListContainer = document.getElementById("map-list");
     if (!mapListContainer) {
       console.error("❌ 找不到地圖列表元素");
       return;
@@ -60,7 +60,7 @@ export class MapUI {
 
     this.gameSystem.switchMap(locationId);
     this.currentLocation = locationId;
-    this.renderMapUI(); // 重新渲染 UI
+    this.update(); // 重新渲染 UI
   }
 }
 

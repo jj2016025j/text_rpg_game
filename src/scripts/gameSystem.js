@@ -21,6 +21,7 @@ export class GameSystem {
     this.objectManager = new ObjectManager();
     this.player = new Player(this); // 玩家資料
     this.currentLocation = this.mapManager.getDefaultRegion();
+    // console.log(this.currentLocation)
     this.initializeGame();
   }
 

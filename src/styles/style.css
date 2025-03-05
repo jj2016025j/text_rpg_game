@@ -123,6 +123,7 @@ p {
   height: 100px;
   gap: 24px;
   background-color: #CBCCCC;
+  color: #000;
 }
 
 .skill-button {
@@ -136,6 +137,17 @@ p {
   gap: 8px;
   border-radius: 8px;
   background-color: #CBCCCC;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.skill-button:hover {
+  background-color: #555;
+}
+
+.skill-button.cooldown {
+  background-color: #aaa;
+  cursor: not-allowed;
 }
 
 .shop-button {
@@ -146,6 +158,18 @@ p {
   border-radius: 4px;
   background-color: #3E3F40;
   color: #fff;
+}
+
+.backpack-button {
+  padding: 6px 12px;
+  background-color: #3E3F40;
+  color: #FFF;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.backpack-button:hover {
+  background-color: #555;
 }
 
 .item,
@@ -209,7 +233,6 @@ p {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  align-self: stretch;
   color: #000;
 }
 
@@ -218,8 +241,19 @@ p {
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
-  align-self: stretch;
   color: #000;
+}
+
+.warning-message {
+  background-color: #EAD113;
+  color: #000;
+  align-self: flex-start;
+}
+
+.error-message {
+  background-color: #EA1313;
+  color: white;
+  align-self: flex-start;
 }
 
 .message {
@@ -299,6 +333,15 @@ p {
   border-radius: 8px;
   background-color: #E5E5E5;
   color: #060606;
+}
+
+.item.selected {
+  background-color: rgba(62, 63, 64, 0.8);
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+  color: #FFFFFF;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
 }
 
 .backpack-title {
@@ -515,6 +558,12 @@ p {
   border-radius: 8px;
   color: #000;
   background-color: #E5E5E5;
+  min-width: 120px;
+  transition: all 0.3s ease-in-out;
+}
+.monster:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .monster-name-level {
@@ -550,6 +599,7 @@ p {
   align-items: flex-start;
   gap: 2px;
   align-self: stretch;
+  width: 100%;
 }
 
 .monster-bar {
@@ -567,14 +617,12 @@ p {
 .monster-hp {
   background-color: #EA1313;
   height: 100%;
-  width: 50%;
   border-radius: 5px;
 }
 
 .monster-mp {
   background-color: #3B97F3;
   height: 100%;
-  width: 50%;
   border-radius: 5px;
 }
 
@@ -589,7 +637,7 @@ p {
   background-color: #FFF;
 }
 
-.npc-list {
+#npc-list {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -606,6 +654,12 @@ p {
   border-radius: 8px;
   background-color: #E5E5E5;
   color: #000;
+  min-width: 120px;
+  transition: all 0.3s ease-in-out;
+}
+.npc:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .npc-button {
@@ -616,6 +670,16 @@ p {
   border-radius: 4px;
   background-color: #3E3F40;
   color: #FFF;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.npc-button:hover {
+  background-color: #555;
+}
+
+.no-npc {
+  color: #888;
+  font-style: italic;
 }
 
 #object-area {
@@ -646,6 +710,12 @@ p {
   border-radius: 8px;
   color: #000;
   background-color: #E5E5E5;
+  min-width: 120px;
+  transition: all 0.3s ease-in-out;
+}
+.object:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .object-button {
@@ -656,6 +726,16 @@ p {
   border-radius: 4px;
   color: #FFF;
   background-color: #3E3F40;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.object-button:hover {
+  background-color: #555;
+}
+
+.no-object {
+  color: #888;
+  font-style: italic;
 }
 
 #backpack-map {
@@ -773,6 +853,7 @@ p {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .shop-title {
@@ -817,6 +898,16 @@ p {
   border-radius: 8px;
   background-color: #E5E5E5;
   color: #000;
+  min-width: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.commodity.selected {
+  background-color: #FFD700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+.commodity:hover {
+  transform: scale(1.05);
 }
 
 .commodity-tag-list {

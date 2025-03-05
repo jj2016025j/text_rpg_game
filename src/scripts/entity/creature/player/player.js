@@ -6,6 +6,7 @@ import { Creature } from "../Creature.js";
 import { CreatureState } from "../CreatureState.js";
 import { Inventory } from "../../../Inventory/Inventory.js";
 import { SystemLog } from "../../../utils/SystemLog.js";
+import { skillsData } from "../Skill/skillsData.js"; // 確保有正確導入技能數據
 
 /**
  * 玩家類別
@@ -21,9 +22,10 @@ export class Player extends Creature {
             state: playerData.state,
             inventory: playerData.inventory,
         });
+        // console.log("玩家")
 
-        this.inventory = new Inventory(gameSystem, playerData.inventory),
-            this.gameSystem = gameSystem;
+        this.inventory = new Inventory(gameSystem, playerData.inventory)
+        this.gameSystem = gameSystem;
         this.skillList = new Set(playerData.skillList); // ✅ 只存技能 ID
 
         this.events = new EventManager();
@@ -52,7 +54,10 @@ export class Player extends Creature {
     }
 
     getSkillList() {
-        return Array.from(this.skillList); // ✅ 只回傳技能 ID
+        // 使用 `map` 將 ID 轉換為技能完整物件
+        return Array.from(this.skillList) // 轉換為陣列
+            .map(skillId => skillsData.find(skill => skill.id === skillId) || null
+            ).filter(skill => skill !== null); // 過濾掉無效技能 ID
     }
 
     getPlayerData() {

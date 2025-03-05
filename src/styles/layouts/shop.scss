@@ -16,6 +16,7 @@
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .shop-title {
@@ -60,6 +61,18 @@
     border-radius: 8px;
     background-color: #E5E5E5;
     color: #000;
+    min-width: 120px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.selected {
+        background-color: #FFD700;
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .commodity-tag-list {

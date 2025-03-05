@@ -22,10 +22,10 @@ export class UIManager {
       SkillUI.initialize(gameSystem);
       InventoryUI.initialize(gameSystem);
       MapUI.initialize(gameSystem);
-      NPCUI.initialize(gameSystem);
-      ShopUI.initialize(gameSystem);
-      ObjectUI.initialize(gameSystem);
       CreatureUI.initialize(gameSystem);
+      NPCUI.initialize(gameSystem);
+      ObjectUI.initialize(gameSystem);
+      ShopUI.initialize(gameSystem);
     } catch (error) {
       console.error("初始化 UI 時出錯：", error);
     }
@@ -39,13 +39,14 @@ export class UIManager {
 
     try {
       PlayerUI.update();
-      // SkillUI.update();
-      // InventoryUI.update();
+      SkillUI.update();
+      InventoryUI.update();
       MapUI.update();
       // ✅ 獲取當前地圖的 NPC 並更新 UI
+      CreatureUI.update();
       NPCUI.update();
-      ShopUI.update();
       ObjectUI.update();
+      ShopUI.update();
 
     } catch (error) {
       console.error("更新 UI 時出錯：", error);

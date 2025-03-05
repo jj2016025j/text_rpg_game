@@ -17,6 +17,7 @@ export class ShopManager {
 
     // ✅ 透過 ID 獲取商店
     getShopById(id) {
+        // console.log(this.shops)
         return this.shops.get(id) || null;
     }
 
