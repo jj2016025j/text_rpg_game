@@ -4,7 +4,7 @@
 
 這是一款使用 **純 HTML、CSS 和 JavaScript** 開發的文字冒險遊戲，目標是提供一個沉浸式的文字體驗，讓玩家透過選擇影響劇情走向。
 
-## 🔗 [遊玩遊戲](https://jj2016025j.github.io/text_rpg_game/)
+## 🔗 [遊玩遊戲](https://jj2016025j.github.io/text_rpg_game/src)
 
 ## 🚀 遊戲特色
 - **無需額外安裝**：直接開啟瀏覽器即可遊玩。
