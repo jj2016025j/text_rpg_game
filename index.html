@@ -1,13 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>文字RPG</title>
+    <link rel="stylesheet" href="src/styles/style.css">
 </head>
+
 <body>
-    <script>
-        window.location.href = "./src";
-    </script>
+    <div id="map">
+        <div id="map-select">
+            <div id="map-list">
+                <div class="map-button">
+                    <h3>古林</h3>
+                    <h6>探索古老的森林</h6>
+                </div>
+                <div class="map-button">
+                    <h3>古林</h3>
+                    <h6>探索古老的森林</h6>
+                </div>
+                <div class="map-button">
+                    <h3>古林</h3>
+                    <h6>探索古老的森林</h6>
+                </div>
+                <div class="map-button">
+                    <h3>古林</h3>
+                    <h6>探索古老的森林</h6>
+                </div>
+                <div class="map-button">
+                    <h3>古林</h3>
+                    <h6>探索古老的森林</h6>
+                </div>
+                <div class="map-button">
+                    <h3>古林</h3>
+                    <h6>探索古老的森林</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="player-chat">
+            <div id="player-skill">
+                <div id="player">
+                    <div id="player-info">
+                        <h6 id="player-id">#1248794123</h6>
+                        <div id="status-list">
+                            <div class="status-tag">
+                                <h6>中毒</h6>
+                            </div>
+                            <div class="status-tag">
+                                <h6>中毒</h6>
+                            </div>
+                            <div class="status-tag">
+                                <h6>中毒</h6>
+                            </div>
+                        </div>
+                        <div id="player-name-level">
+                            <h3 id="player-name">芙麗蓮</h3>
+                            <h4 id="player-level">LV.1</h4>
+                        </div>
+                    </div>
+                    <div id="numeric">
+                        <div class="state">
+                            <label>
+                                <h6>血量</h6>
+                            </label>
+                            <div class="bar">
+                                <div class="player-hp" style="width:50%;"></div>
+                            </div>
+                        </div>
+                        <div class="state">
+                            <label>
+                                <h6>魔力</h6>
+                            </label>
+                            <div class="bar">
+                                <div class="player-mp" style="width:50%;"></div>
+                            </div>
+                        </div>
+                        <div class="state">
+                            <label>
+                                <h6>經驗值</h6>
+                            </label>
+                            <div class="bar">
+                                <div class="player-exp" style="width:50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skill">
+                    <div id="skill-list">
+                        <div class="skill-button">火焰術</div>
+                        <div class="skill-button">冰凍術</div>
+                        <div class="skill-button">雷擊</div>
+                        <div class="skill-button">治癒</div>
+                        <div class="skill-button">火焰術</div>
+                        <div class="skill-button">冰凍術</div>
+                        <div class="skill-button">雷擊</div>
+                        <div class="skill-button">治癒</div>
+                    </div>
+                </div>
+            </div>
+            <div id="chat-send">
+                <div id="chat">
+                    <div id="messages">
+                        <div class="system-message">
+                            <div class="message">
+                                <h6>系統訊息</h6>
+                            </div>
+                        </div>
+                        <div class="player-message">
+                            <div class="message">
+                                <h6>玩家訊息</h6>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <div class="message">
+                                <h6>系統訊息</h6>
+                            </div>
+                        </div>
+                        <div class="player-message">
+                            <div class="message">
+                                <h6>玩家訊息</h6>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <div class="message">
+                                <h6>系統訊息</h6>
+                            </div>
+                        </div>
+                        <div class="player-message">
+                            <div class="message">
+                                <h6>玩家訊息</h6>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <div class="message">
+                                <h6>系統訊息</h6>
+                            </div>
+                        </div>
+                        <div class="player-message">
+                            <div class="message">
+                                <h6>玩家訊息</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="message-send">
+                    <input type="text" id="message-input" placeholder="輸入訊息...">
+                    <div id="send">
+                        <h6></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="backpack-map">
+            <div id="backpack">
+                <div class="backpack-title">
+                    <h4>背包</h4>
+                    <div id="backpack-buttons">
+                        <button id="SelectionButton" class="backpack-button">全選</button>
+                        <button id="useItemButton" class="backpack-button">使用</button>
+                        <button id="removeItemButton" class="backpack-button">丟棄</button>
+                        <button id="sellItemButton" class="backpack-button">售出</button>
+                    </div>
+                </div>
+                <div id="backpack-area">
+                    <div id="backpack-list">
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="map-area">
+                <div id="map-area-list">
+                    <div id="monster-area">
+                        <div id="monster-list">
+                            <div class="monster">
+                                <div class="monster-name-level">
+                                    <h3 class="monster-name">野狼</h3>
+                                    <h4 class="monster-level">LV1</h4>
+                                </div>
+                                <div class="monster-status-list">
+                                    <div class="monster-status-tag">
+                                        <h6>中毒</h6>
+                                    </div>
+                                </div>
+                                <div class="monster-stat">
+                                    <label>
+                                        <h6>血量</h6>
+                                    </label>
+                                    <div class="monster-bar">
+                                        <div class="monster-hp" style="width:50%;"></div>
+                                    </div>
+                                </div>
+                                <div class="monster-stat">
+                                    <label>
+                                        <h6>魔力</h6>
+                                    </label>
+                                    <div class="monster-bar">
+                                        <div class="monster-mp" style="width:50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="npc-area">
+                        <div id="npc-list">
+                            <div class="npc">
+                                <h3>旅人</h3>
+                                <div class="npc-button">
+                                    <h3>對話</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="object-area">
+                        <div id="object-list">
+                            <div class="object">
+                                <h3>寶箱</h3>
+                                <div class="object-button">
+                                    <h3>打開</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shop-list">
+                        <div class="shop">
+                            <div class="shop-title">
+                                <h4>旅店</h4>
+                                <div class="shop-buttons">
+                                    <div class="backpack-button">全選</div>
+                                    <div class="backpack-button">購買</div>
+                                </div>
+                            </div>
+                            <div class="commodity-list">
+                                <div class="commodity">
+                                    <h6>精靈弓</h6>
+                                    <div class="commodity-tag-list">
+                                        <div class="commodity-tag">
+                                            <h6>攻擊力 +20</h6>
+                                        </div>
+                                        <div class="commodity-tag">
+                                            <h6>防禦力 +20</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="commodity">
+                                    <h6>精靈弓</h6>
+                                    <div class="commodity-tag-list">
+                                        <div class="commodity-tag">
+                                            <h6>攻擊力 +20</h6>
+                                        </div>
+                                        <div class="commodity-tag">
+                                            <h6>防禦力 +20</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop">
+                            <div class="shop-title">
+                                <h4>旅店</h4>
+                                <div class="shop-buttons">
+                                    <div class="backpack-button">全選</div>
+                                    <div class="backpack-button">購買</div>
+                                </div>
+                            </div>
+                            <div class="commodity-list">
+                                <div class="commodity">
+                                    <h6>精靈弓</h6>
+                                    <div class="commodity-tag-list">
+                                        <div class="commodity-tag">
+                                            <h6>攻擊力 +20</h6>
+                                        </div>
+                                        <div class="commodity-tag">
+                                            <h6>防禦力 +20</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="commodity">
+                                    <h6>精靈弓</h6>
+                                    <div class="commodity-tag-list">
+                                        <div class="commodity-tag">
+                                            <h6>攻擊力 +20</h6>
+                                        </div>
+                                        <div class="commodity-tag">
+                                            <h6>防禦力 +20</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="module" src="src/scripts/main.js"></script>
 </body>
+
 </html>
