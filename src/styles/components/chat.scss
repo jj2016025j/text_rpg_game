@@ -1,0 +1,100 @@
+// styles/components/chat.scss
+@use "../variables" as *;
+@use "../mixins" as *;
+
+#chat-send {
+    @include box-style($color-white-gray);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+#chat {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid $color-medium-gray;
+    background-color: $color-white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.system-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    color: #000;
+}
+
+.player-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    align-self: stretch;
+    color: #000;
+}
+
+.message {
+    display: flex;
+    padding: 4px 8px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #E5E5E5;
+}
+
+#message-send {
+    display: flex;
+    height: 32px;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+#message-input {
+    display: flex;
+    height: 20px;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #3E3F40;
+    background-color: #fff;
+}
+
+#send {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #3E3F40;
+    background-color: #fff;
+    color: #000;
+}

@@ -1,0 +1,99 @@
+@use "../variables";
+@use "../mixins";
+
+#backpack-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-height: 40vh;
+}
+
+#backpack {
+    display: flex;
+    width: 500px;
+    max-height: 100%;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.backpack-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: #000;
+}
+
+#backpack-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.backpack-button {
+    display: flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #3E3F40;
+    color: #fff;
+}
+
+#backpack-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+#backpack-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.item {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #E5E5E5;
+    color: #000
+}
+
+.item-tag-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.item-tag {
+    background-color: #3E3F40;
+    display: flex;
+    padding: 2px 8px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 4px;
+    color: #fff;
+}

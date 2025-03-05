@@ -1,0 +1,27 @@
+// styles/variables.scss
+
+// 🎨 顏色變數
+$color-white: #FFFFFF;
+$color-white-gray: #E5E5E5;
+$color-light-gray: #CBCCCC;
+$color-medium-gray: #3E3F40;
+$color-dark-gray: #1F2021;
+$color-black: #060606;
+$color-background: #F6F6F6;
+
+// 主要顏色區分
+$color-text: $color-black; // 文字顏色
+$color-border: $color-medium-gray; // 邊框顏色
+$color-primary: #3B97F3; // 主要按鈕色
+$color-secondary: #EA1313; // 次要按鈕色
+
+// 🔤 字體
+$font-primary: "Inter", "Arial Narrow", "Impact", sans-serif;
+$font-size-default: 14px;
+$font-weight-bold: 800;
+
+// 📏 尺寸 & 間距
+$border-radius: 8px;
+$padding-default: 24px;
+$gap-default: 24px;
+$height-full: 100vh;

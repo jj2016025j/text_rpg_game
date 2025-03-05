@@ -1,0 +1,48 @@
+// styles/mixins.scss
+@use "variables" as *;
+
+// 📌 通用 Flex 排版
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column($gap: $gap-default) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+// 🎨 按鈕樣式
+@mixin button-style($bg-color: $color-medium-gray, $text-color: $color-white) {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius;
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// 🖋️ 標準字體樣式
+@mixin text-style($size: $font-size-default, $weight: $font-weight-bold) {
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@mixin box-style($bg-color) {
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: $bg-color;
+}

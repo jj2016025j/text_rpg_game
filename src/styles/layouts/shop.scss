@@ -1,0 +1,84 @@
+// styles/layouts/shop.scss
+@use "../variables" as *;
+@use "../mixins" as *;
+
+#shop-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.shop {
+    @include box-style($color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.shop-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: #000;
+}
+
+.commodity {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: $color-white-gray;
+    color: $color-black;
+}
+
+.shop-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.commodity-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.commodity {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #E5E5E5;
+    color: #000;
+}
+
+.commodity-tag-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.commodity-tag {
+    background-color: #3E3F40;
+    display: flex;
+    padding: 2px 8px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 4px;
+    color: white;
+}

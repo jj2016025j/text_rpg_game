@@ -1,0 +1,21 @@
+// styles/components/skill.scss
+@use "../variables" as *;
+@use "../mixins" as *;
+
+#skill {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+#skill-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    flex: 1 0 0;
+    border-radius: 8px;
+}

@@ -1,0 +1,13 @@
+// styles/main.scss
+@use "variables" as *;
+@use "mixins" as *;
+@use "base";
+@use "components/buttons";
+@use "components/cards";
+@use "components/chat";
+@use "components/inventory";
+@use "components/player";
+@use "layouts/map";
+@use "layouts/backpack";
+@use "layouts/shop";
+@use "layouts/skill";

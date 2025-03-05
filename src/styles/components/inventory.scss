@@ -1,0 +1,39 @@
+// styles/components/inventory.scss
+@use "../variables" as *;
+@use "../mixins" as *;
+
+#backpack-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
+    max-height: 40vh;
+}
+
+#backpack {
+    @include box-style($color-white);
+    width: 500px;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.item {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: $color-white-gray;
+    color: $color-black;
+}
+
+.backpack-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-black);
+}

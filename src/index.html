@@ -65,7 +65,7 @@
                     <div id="numeric">
                         <div class="state">
                             <label>
-                                <h5>HP</h5>
+                                <h6>血量</h6>
                             </label>
                             <div class="bar">
                                 <div class="player-hp" style="width:50%;"></div>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="state">
                             <label>
-                                <h5>MP</h5>
+                                <h6>魔力</h6>
                             </label>
                             <div class="bar">
                                 <div class="player-mp" style="width:50%;"></div>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="state">
                             <label>
-                                <h5>EXP</h5>
+                                <h6>經驗值</h6>
                             </label>
                             <div class="bar">
                                 <div class="player-exp" style="width:50%;"></div>
@@ -104,7 +104,7 @@
             </div>
             <div id="chat-send">
                 <div id="chat">
-                    <div class="messages">
+                    <div id="messages">
                         <div class="system-message">
                             <div class="message">
                                 <h6>系統訊息</h6>
@@ -158,7 +158,7 @@
 
         <div id="backpack-map">
             <div id="backpack">
-                <div class="title">
+                <div class="backpack-title">
                     <h4>背包</h4>
                     <div id="backpack-buttons">
                         <div class="backpack-button">全選</div>
@@ -167,17 +167,75 @@
                         <div class="backpack-button">售出</div>
                     </div>
                 </div>
-                <div id="backpack-list">
-                    <div class="item">
-                        <h5>精靈弓</h5>
-                        <div class="item-tag-list">
-                            <div class="item-tag">
-                                <h6>攻擊力 +20</h6>
-                            </div>
-                            <div class="item-tag">
-                                <h6>防禦力 +20</h6>
+                <div id="backpack-area">
+                    <div id="backpack-list">
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
                             </div>
                         </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>精靈弓</h6>
+                            <div class="item-tag-list">
+                                <div class="item-tag">
+                                    <h6>攻擊力 +20</h6>
+                                </div>
+                                <div class="item-tag">
+                                    <h6>防禦力 +20</h6>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -191,29 +249,26 @@
                                     <h3 class="monster-name">野狼</h3>
                                     <h4 class="monster-level">LV1</h4>
                                 </div>
-                                <div class="status-list">
-                                    <div class="status-tag">
+                                <div class="monster-status-list">
+                                    <div class="monster-status-tag">
                                         <h6>中毒</h6>
                                     </div>
                                 </div>
-                                <div class="monster-numeric">
-                                    <div class="stat">
-                                        <label>
-                                            <h5>血量</h5>
-                                        </label>
-                                        <div class="bar">
-                                            <div class="monster-hp" style="width:50%;"></div>
-                                        </div>
+                                <div class="monster-stat">
+                                    <label>
+                                        <h6>血量</h6>
+                                    </label>
+                                    <div class="monster-bar">
+                                        <div class="monster-hp" style="width:50%;"></div>
                                     </div>
-                                    <div class="stat">
-                                        <label>
-                                            <h5>魔力</h5>
-                                        </label>
-                                        <div class="bar">
-                                            <div class="monster-mp" style="width:50%;"></div>
-                                        </div>
+                                </div>
+                                <div class="monster-stat">
+                                    <label>
+                                        <h6>魔力</h6>
+                                    </label>
+                                    <div class="monster-bar">
+                                        <div class="monster-mp" style="width:50%;"></div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -242,14 +297,14 @@
                         <div class="shop">
                             <div class="shop-title">
                                 <h4>旅店</h4>
-                                <div class="shop-button">
-                                    <button>全選</button>
-                                    <button>購買</button>
+                                <div class="shop-buttons">
+                                    <div class="backpack-button">全選</div>
+                                    <div class="backpack-button">購買</div>
                                 </div>
                             </div>
                             <div class="commodity-list">
                                 <div class="commodity">
-                                    <h5>精靈弓</h5>
+                                    <h6>精靈弓</h6>
                                     <div class="commodity-tag-list">
                                         <div class="commodity-tag">
                                             <h6>攻擊力 +20</h6>
@@ -260,7 +315,7 @@
                                     </div>
                                 </div>
                                 <div class="commodity">
-                                    <h5>精靈弓</h5>
+                                    <h6>精靈弓</h6>
                                     <div class="commodity-tag-list">
                                         <div class="commodity-tag">
                                             <h6>攻擊力 +20</h6>
@@ -274,15 +329,15 @@
                         </div>
                         <div class="shop">
                             <div class="shop-title">
-                                <h4>商店</h4>
-                                <div class="shop-button">
-                                    <button>全選</button>
-                                    <button>購買</button>
+                                <h4>旅店</h4>
+                                <div class="shop-buttons">
+                                    <div class="backpack-button">全選</div>
+                                    <div class="backpack-button">購買</div>
                                 </div>
                             </div>
                             <div class="commodity-list">
                                 <div class="commodity">
-                                    <h5>精靈弓</h5>
+                                    <h6>精靈弓</h6>
                                     <div class="commodity-tag-list">
                                         <div class="commodity-tag">
                                             <h6>攻擊力 +20</h6>
@@ -293,7 +348,7 @@
                                     </div>
                                 </div>
                                 <div class="commodity">
-                                    <h5>精靈弓</h5>
+                                    <h6>精靈弓</h6>
                                     <div class="commodity-tag-list">
                                         <div class="commodity-tag">
                                             <h6>攻擊力 +20</h6>
@@ -311,7 +366,7 @@
 
         </div>
 
-        <script src="scripts/script.js"></script>
+        <script type="module" src="scripts/main.js"></script>
 </body>
 
 </html>

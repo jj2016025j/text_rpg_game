@@ -1,0 +1,20 @@
+@use "../variables";
+
+.item,
+.commodity {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white-gray);
+    border-radius: 8px;
+    color: var(--color-black);
+}
+
+.item-tag,
+.commodity-tag {
+    background-color: var(--color-medium-gray);
+    color: var(--color-white);
+    padding: 2px 8px;
+    border-radius: 4px;
+}

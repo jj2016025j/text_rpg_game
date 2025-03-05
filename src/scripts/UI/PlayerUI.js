@@ -7,7 +7,7 @@ export class PlayerUI {
       return;
     }
 
-    this.gameSystem = gameSystem; // ✅ 儲存 gameSystem，後續 update 直接取用
+    this.gameSystem = gameSystem;
     this.player = gameSystem.player;
 
     SystemLog.addMessage("[玩家UI] 開始初始化...");
@@ -26,12 +26,24 @@ export class PlayerUI {
 
     try {
       document.querySelector("#player-name").textContent = this.player.name;
-      document.querySelector("#player-health").textContent = `${state.health}/${state.maxHealth}`;
-      document.querySelector("#player-mana").textContent = `${state.mana}/${state.maxMana}`;
-      document.querySelector("#player-exp").textContent = `${state.experience}/${state.maxExperience}`;
-      document.querySelector("#player-level").textContent = state.level;
-      document.querySelector("#player-gold").textContent = inventory.gold;
-      document.querySelector("#player-states").textContent = state.currentState; // 修正為 `currentState`
+      document.querySelector("#player-level").textContent = `LV.${state.level}`;
+      // document.querySelector("#player-gold").textContent = `${inventory.gold} G`;
+
+      // 更新血條、魔力條、經驗條
+      document.querySelector(".player-hp").style.width = `${(state.health / state.maxHealth) * 100}%`;
+      document.querySelector(".player-mp").style.width = `${(state.mana / state.maxMana) * 100}%`;
+      document.querySelector(".player-exp").style.width = `${(state.experience / state.maxExperience) * 100}%`;
+
+      // 更新玩家狀態標籤
+      const statusList = document.querySelector("#status-list");
+      statusList.innerHTML = "";
+      // state.effects.forEach(effect => {
+      //   const tag = document.createElement("div");
+      //   tag.classList.add("status-tag");
+      //   tag.innerHTML = `<h6>${effect}</h6>`;
+      //   statusList.appendChild(tag);
+      // });
+
     } catch (err) {
       console.error("更新玩家 UI 時出錯:", err);
     }
@@ -45,7 +57,7 @@ export class PlayerUI {
           const randomGold = Math.floor(Math.random() * 50) + 1; // 隨機增加 1-50 金幣
           this.player.inventory.addMoney(randomGold);
           this.update();
-          SystemLog.addMessage(`增加金錢：${randomGold}`);
+          SystemLog.addMessage(`💰 增加金錢：${randomGold}`);
         },
       }, {
         id: "removeGoldButton", // 消耗金錢按鈕
@@ -79,7 +91,7 @@ export class PlayerUI {
           const randomManaChange = Math.floor(Math.random() * 20) - 10;
           this.player.state.mana = Math.max(0, Math.min(this.player.state.maxMana, this.player.state.mana + randomManaChange));
           this.update();
-          SystemLog.addMessage(`魔力隨機變動：${randomManaChange}`);
+          SystemLog.addMessage(`🔵 魔力隨機變動：${randomManaChange}`);
         },
       },
       {
@@ -88,7 +100,7 @@ export class PlayerUI {
           const randomExp = Math.floor(Math.random() * 50);
           this.player.state.gainExperience(randomExp);
           this.update();
-          SystemLog.addMessage(`經驗值隨機增加：${randomExp}`);
+          SystemLog.addMessage(`🆙 經驗值隨機增加：${randomExp}`);
         },
       },
       {
@@ -96,7 +108,7 @@ export class PlayerUI {
         handler: () => {
           this.player.state.levelUp();
           this.update();
-          SystemLog.addMessage("升級成功");
+          SystemLog.addMessage("🔥 升級成功");
         },
       },
       {
@@ -106,7 +118,7 @@ export class PlayerUI {
           const randomLocation = locations[Math.floor(Math.random() * locations.length)];
           this.player.location = randomLocation;
           this.update();
-          SystemLog.addMessage(`隨機位置變動：${randomLocation}`);
+          SystemLog.addMessage(`📍 隨機位置變動：${randomLocation}`);
         },
       },
       {
@@ -114,7 +126,7 @@ export class PlayerUI {
         handler: () => {
           this.player.state.addEffect("PoisonEffect");
           this.update();
-          SystemLog.addMessage("中毒效果已添加");
+          SystemLog.addMessage("☠️ 中毒效果已添加");
         },
       },
       {
@@ -122,14 +134,14 @@ export class PlayerUI {
         handler: () => {
           this.player.state.removeEffect("PoisonEffect");
           this.update();
-          SystemLog.addMessage("中毒效果已移除");
+          SystemLog.addMessage("✨ 中毒效果已移除");
         },
       },
       {
         id: "saveGameButton",
         handler: () => {
           this.gameSystem.saveGameToCookie();
-          SystemLog.addMessage("遊戲進度已儲存");
+          SystemLog.addMessage("💾 遊戲進度已儲存");
         },
       },
       {
@@ -137,7 +149,7 @@ export class PlayerUI {
         handler: () => {
           this.gameSystem.loadGameFromCookie();
           this.update();
-          SystemLog.addMessage("遊戲進度已載入");
+          SystemLog.addMessage("📂 遊戲進度已載入");
         },
       },
     ];
@@ -147,7 +159,7 @@ export class PlayerUI {
       if (button) {
         button.addEventListener("click", handler);
       } else {
-        console.warn(`按鈕 ${id} 未找到`);
+        console.warn(`⚠️ 按鈕 ${id} 未找到`);
       }
     });
   }

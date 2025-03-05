@@ -2,7 +2,7 @@ export class SystemLog {
     static logContainer = null;
     static maxMessages = 50; // 最多保留 50 條訊息
 
-    static initialize(logElementId = "chatLog") {
+    static initialize(logElementId = "messages") {
         this.logContainer = document.getElementById(logElementId);
         if (!this.logContainer) {
             console.error(`❌ 找不到 ID 為 '${logElementId}' 的元素，請確認 HTML 結構`);

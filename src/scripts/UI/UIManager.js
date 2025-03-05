@@ -39,8 +39,8 @@ export class UIManager {
 
     try {
       PlayerUI.update();
-      SkillUI.update();
-      InventoryUI.update();
+      // SkillUI.update();
+      // InventoryUI.update();
       MapUI.update();
       // ✅ 獲取當前地圖的 NPC 並更新 UI
       NPCUI.update();
