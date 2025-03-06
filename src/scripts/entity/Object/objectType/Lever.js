@@ -1,5 +1,5 @@
-import { GameObject } from "../GameObject.js";
-import { SystemLog } from "../../../utils/SystemLog.js";
+import { GameObject } from "../gameObject.js";
+import { SystemLog } from "../../../utils/systemLog.js";
 
 export class Lever extends GameObject {
   constructor(props) {

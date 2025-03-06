@@ -1,5 +1,5 @@
-import { BaseEntity } from "../../BaseEntity.js";
-import { SystemLog } from "../../../utils/SystemLog.js";
+import { BaseEntity } from "../../baseEntity.js";
+import { SystemLog } from "../../../utils/systemLog.js";
 
 class NPC extends BaseEntity {
     constructor({ id, name, dialogue = [], itemsForSale = [] }) {

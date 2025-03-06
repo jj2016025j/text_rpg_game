@@ -1,5 +1,5 @@
 import { EffectManager } from "./state/effectManager.js";
-import { SystemLog } from "../utils/SystemLog.js";
+import { SystemLog } from "../utils/systemLog.js";
 
 export class EntityState {
     constructor(entity, stateConfig = {}) {

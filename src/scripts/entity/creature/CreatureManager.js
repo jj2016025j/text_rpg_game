@@ -1,6 +1,6 @@
-import { Creature } from "./Creature.js";
+import { Creature } from "./creature.js";
 import { creatureData } from "./creatureData.js";
-import { SystemLog } from "../../utils/SystemLog.js";
+import { SystemLog } from "../../utils/systemLog.js";
 
 export class CreatureManager {
     constructor(gameSystem, customCreatures = []) {

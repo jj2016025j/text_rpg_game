@@ -1,5 +1,5 @@
-import { EntityState } from "../EntityState.js";
-import { SystemLog } from "../../utils/SystemLog.js";
+import { EntityState } from "../entityState.js";
+import { SystemLog } from "../../utils/systemLog.js";
 
 export class CreatureState extends EntityState {
     constructor(entity, stateConfig = {}) {

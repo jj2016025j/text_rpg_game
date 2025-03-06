@@ -1,5 +1,5 @@
-import { SystemLog } from "../utils/SystemLog.js";
-import { Inventory } from "../Inventory/Inventory.js";
+import { SystemLog } from "../utils/systemLog.js";
+import { Inventory } from "../Inventory/inventory.js";
 
 export class Shop {
     constructor(gameSystem, { id, name, itemsForSale = [] }) {

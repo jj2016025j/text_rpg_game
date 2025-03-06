@@ -1,6 +1,6 @@
-import { BaseEntity } from "../BaseEntity.js";
-import { CreatureState } from "./CreatureState.js";
-import { Inventory } from "../../Inventory/Inventory.js";
+import { BaseEntity } from "../baseEntity.js";
+import { CreatureState } from "./creatureState.js";
+import { Inventory } from "../../Inventory/inventory.js";
 
 /**
  * 生物類別

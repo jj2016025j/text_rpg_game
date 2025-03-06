@@ -1,7 +1,7 @@
 // src\scripts\entity\creature\NPC\NPCManager.js
 import { NPC } from "./NPC.js";
 import { npcData } from "./npcData.js"; // 🔹 先導入預設的 NPC 數據
-import { SystemLog } from "../../../utils/SystemLog.js";
+import { SystemLog } from "../../../utils/systemLog.js";
 
 class NPCManager {
     constructor(customNpcs = []) {

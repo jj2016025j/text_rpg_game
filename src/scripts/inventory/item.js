@@ -1,4 +1,4 @@
-import { SystemLog } from "../utils/SystemLog.js";
+import { SystemLog } from "../utils/systemLog.js";
 
 /**
  * 物品基類 (抽象類別)

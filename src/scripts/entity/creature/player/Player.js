@@ -1,11 +1,11 @@
 import { defaultPlayerData } from "./playerData.js";
-import { Skill } from "../Skill/Skill.js";
+import { Skill } from "../Skill/skill.js";
 import { EventManager } from "../../../utils/eventManager.js";
 import { BehaviorManager } from "../../state/BehaviorManager.js";
-import { Creature } from "../Creature.js";
-import { CreatureState } from "../CreatureState.js";
-import { Inventory } from "../../../Inventory/Inventory.js";
-import { SystemLog } from "../../../utils/SystemLog.js";
+import { Creature } from "../creature.js";
+import { CreatureState } from "../creatureState.js";
+import { Inventory } from "../../../Inventory/inventory.js";
+import { SystemLog } from "../../../utils/systemLog.js";
 import { skillsData } from "../Skill/skillsData.js"; // 確保有正確導入技能數據
 
 /**

@@ -1,7 +1,7 @@
 // **水井 (Well)** - 可補充水分
 
-import { GameObject } from "../GameObject.js";
-import { SystemLog } from "../../../utils/SystemLog.js";
+import { GameObject } from "../gameObject.js";
+import { SystemLog } from "../../../utils/systemLog.js";
 
 export class Well extends GameObject {
   constructor(props) {

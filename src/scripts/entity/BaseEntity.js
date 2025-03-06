@@ -1,4 +1,4 @@
-import { EntityState } from "./EntityState.js";
+import { EntityState } from "./entityState.js";
 
 /**
  * 生命體基礎類別

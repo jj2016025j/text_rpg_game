@@ -1,7 +1,7 @@
 // **寶箱 (TreasureChest)** - 可開啟獲取物品
 
-import { GameObject } from "../GameObject.js";
-import { SystemLog } from "../../../utils/SystemLog.js";
+import { GameObject } from "../gameObject.js";
+import { SystemLog } from "../../../utils/systemLog.js";
 
 export class TreasureChest extends GameObject {
   constructor(props) {

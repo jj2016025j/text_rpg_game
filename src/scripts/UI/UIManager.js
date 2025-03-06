@@ -1,14 +1,14 @@
 // UIManager.js
 
-import { SystemLog } from "../utils/SystemLog.js";
-import { PlayerUI } from "./PlayerUI.js";
-import { SkillUI } from "./SkillUI.js";
-import { InventoryUI } from "./InventoryUI.js";
-import { MapUI } from "./MapUI.js";
-import { ShopUI } from "./ShopUI.js";
-import { NPCUI } from "./NPCUI.js";
-import { ObjectUI } from "./ObjectUI.js";
-import { CreatureUI } from "./CreatureUI.js";
+import { SystemLog } from "../utils/systemLog.js";
+import { PlayerUI } from "./playerUI.js";
+import { SkillUI } from "./skillUI.js";
+import { InventoryUI } from "./inventoryUI.js";
+import { MapUI } from "./mapUI.js";
+import { ShopUI } from "./shopUI.js";
+import { NPCUI } from "./npcUI.js";
+import { ObjectUI } from "./objectUI.js";
+import { CreatureUI } from "./creatureUI.js";
 
 export class UIManager {
   static initialize(gameSystem) {

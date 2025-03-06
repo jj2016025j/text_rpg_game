@@ -1,14 +1,14 @@
-import { GameObject } from "./GameObject.js";
-import { TreasureChest } from "./objectType/TreasureChest.js";
-import { Well } from "./objectType/Well.js";
-import { Lever } from "./objectType/Lever.js";
-import { Fountain } from "./objectType/Fountain.js";
-import { MysticAltar } from "./objectType/MysticAltar.js";
-import { CursedRelic } from "./objectType/CursedRelic.js";
-import { AncientStatue } from "./objectType/AncientStatue.js";
-import { Ruins } from "./objectType/Ruins.js";
-import { Rock } from "./objectType/Rock.js";
-import { Tree } from "./objectType/Tree.js";
+import { GameObject } from "./gameObject.js";
+import { TreasureChest } from "./objectType/treasureChest.js";
+import { Well } from "./objectType/well.js";
+import { Lever } from "./objectType/lever.js";
+import { Fountain } from "./objectType/fountain.js";
+import { MysticAltar } from "./objectType/mysticAltar.js";
+import { CursedRelic } from "./objectType/cursedRelic.js";
+import { AncientStatue } from "./objectType/ancientStatue.js";
+import { Ruins } from "./objectType/ruins.js";
+import { Rock } from "./objectType/rock.js";
+import { Tree } from "./objectType/tree.js";
 import { defaultObjectData } from "./defaultObjectData.js";
 
 export class ObjectManager {

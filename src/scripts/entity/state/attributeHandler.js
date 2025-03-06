@@ -1,4 +1,4 @@
-import { SystemLog } from "../../utils/SystemLog.js";
+import { SystemLog } from "../../utils/systemLog.js";
 
 class AttributeHandler {
     static apply(attributes, states) {

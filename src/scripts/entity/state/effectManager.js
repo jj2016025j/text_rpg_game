@@ -1,6 +1,6 @@
 import { AttributeHandler } from "./attributeHandler.js";
 import { AvailableEffects } from "./availableEffects.js";
-import { SystemLog } from "../../utils/SystemLog.js";
+import { SystemLog } from "../../utils/systemLog.js";
 
 class EffectManager {
     constructor(state, activeEffects = []) {

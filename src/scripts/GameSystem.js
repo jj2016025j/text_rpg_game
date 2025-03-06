@@ -1,14 +1,14 @@
 import { CookieManager } from "./utils/cookieManager.js";
 import { Player } from "./entity/creature/player/player.js";
-import { ItemManager } from "./Inventory/ItemManager.js";
-import { SkillManager } from "./entity/creature/Skill/SkillManager.js";
-import { MapManager } from "./map/MapManager.js";
-import { NPCManager } from "./entity/creature/NPC/NPCManager.js";
-import { ShopManager } from "./shop/ShopManager.js";
-import { CreatureManager } from "./entity/creature/CreatureManager.js";
-import { ObjectManager } from "./entity/Object/ObjectManager.js";
-import { UIManager } from "./UI/UIManager.js";
-import { SystemLog } from "./utils/SystemLog.js";
+import { ItemManager } from "./Inventory/itemManager.js";
+import { SkillManager } from "./entity/creature/Skill/skillManager.js";
+import { MapManager } from "./map/mapManager.js";
+import { NPCManager } from "./entity/creature/NPC/npcManager.js";
+import { ShopManager } from "./shop/shopManager.js";
+import { CreatureManager } from "./entity/creature/creatureManager.js";
+import { ObjectManager } from "./entity/Object/objectManager.js";
+import { UIManager } from "./UI/uiManager.js";
+import { SystemLog } from "./utils/systemLog.js";
 
 export class GameSystem {
   constructor() {
