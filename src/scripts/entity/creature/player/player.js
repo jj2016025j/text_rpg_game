@@ -1,7 +1,7 @@
 import { defaultPlayerData } from "./playerData.js";
 import { Skill } from "../Skill/skill.js";
 import { EventManager } from "../../../utils/eventManager.js";
-import { BehaviorManager } from "../../state/BehaviorManager.js";
+import { BehaviorManager } from "../../state/behaviorManager.js";
 import { Creature } from "../creature.js";
 import { CreatureState } from "../creatureState.js";
 import { Inventory } from "../../../Inventory/inventory.js";

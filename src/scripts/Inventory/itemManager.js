@@ -1,4 +1,4 @@
-import { Item, Food, Potion, Weapon, Armor, Tool, Material } from "./Item.js";
+import { Item, Food, Potion, Weapon, Armor, Tool, Material } from "./item.js";
 import { itemsData } from "./itemData.js";
 
 export class ItemManager {

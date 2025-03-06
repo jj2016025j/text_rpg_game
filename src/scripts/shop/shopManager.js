@@ -1,4 +1,4 @@
-import { Shop } from "./Shop.js";
+import { Shop } from "./shop.js";
 import { shopData } from "./shopData.js";
 
 export class ShopManager {
