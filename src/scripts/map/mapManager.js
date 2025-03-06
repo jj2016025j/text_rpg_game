@@ -1,4 +1,4 @@
-import { MapRegion } from "./MapRegion.js";
+import { MapRegion } from "./mapRegion.js";
 import { defaultMapData } from "./mapData.js";
 
 export class MapManager {

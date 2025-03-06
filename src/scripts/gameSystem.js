@@ -3,7 +3,7 @@ import { Player } from "./entity/creature/player/player.js";
 import { ItemManager } from "./Inventory/itemManager.js";
 import { SkillManager } from "./entity/creature/Skill/skillManager.js";
 import { MapManager } from "./map/mapManager.js";
-import { NPCManager } from "./entity/creature/NPC/npcManager.js";
+import { NPCManager } from "./entity/creature/npc/npcManager.js";
 import { ShopManager } from "./shop/shopManager.js";
 import { CreatureManager } from "./entity/creature/creatureManager.js";
 import { ObjectManager } from "./entity/Object/objectManager.js";
