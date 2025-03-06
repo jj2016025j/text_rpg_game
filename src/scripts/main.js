@@ -1,5 +1,5 @@
-import { GameSystem } from "./GameSystem.js";
-import { SystemLog } from "./utils/SystemLog.js";
+import { GameSystem } from "./gameSystem.js";
+import { SystemLog } from "./utils/systemLog.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   SystemLog.initialize(); // 初始化系統提示 UI
