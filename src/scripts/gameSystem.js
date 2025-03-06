@@ -6,7 +6,7 @@ import { MapManager } from "./map/mapManager.js";
 import { NPCManager } from "./entity/creature/npc/npcManager.js";
 import { ShopManager } from "./shop/shopManager.js";
 import { CreatureManager } from "./entity/creature/creatureManager.js";
-import { ObjectManager } from "./entity/Object/objectManager.js";
+import { ObjectManager } from "./entity/object/objectManager.js";
 import { UIManager } from "./UI/uiManager.js";
 import { SystemLog } from "./utils/systemLog.js";
 
